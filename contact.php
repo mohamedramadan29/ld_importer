@@ -100,7 +100,7 @@ include "init.php";
 						</span>
 
 						<p class="stext-115 cl6 size-213 p-t-18">
-							הונאה חדשה, ישראל
+							גדיידה מכר 1007 ישראל
 						</p>
 					</div>
 				</div>

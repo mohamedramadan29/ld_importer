@@ -149,7 +149,7 @@ include "init.php";
 	<div class="container">
 		<div class="">
 			<h3 class="ltext-105 cl5 txt-center respon1 latest_models">
-				הדגמים האחרונים
+				כל הדגמים
 			</h3>
 		</div>
 		<!-- Tab01 -->
