@@ -136,14 +136,16 @@ if (isset($_GET['slug'])) {
 							</th>
 						</tr>
 						<tr>
-							<th> זמין במלאי </th>
+
 							<?php
 							if ($product_data['av_num'] != 0 && $product_data['av_num'] != null) {
 							?>
+								<th> זמין במלאי </th>
 								<th style="color: var(--main_color);"> <?php echo $product_data['av_num'] ?> </th>
 							<?php
 							} else { ?>
-								<th style="color: var(--main_color);"> Not Availbe </th>
+								<th style="text-decoration: line-through;"> זמין במלאי </th>
+								<th style="color: var(--main_color);"> לא זמין </th>
 							<?php
 							}
 							?>
