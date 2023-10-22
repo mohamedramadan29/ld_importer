@@ -77,6 +77,7 @@
                                         <th> slug </th>
                                         <th> تاج </th>
                                         <th> صورة القسم </th>
+                                        <th> مميز </th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -113,6 +114,15 @@
                                             <td> <?php echo  $cat['tags']; ?> </td>
                                             <td>
                                                 <img style="width: 80px; height:80px;" src="category_images/<?php echo $cat['image']; ?>" alt="">
+                                            </td>
+                                            <td> <?php
+                                                    if ($cat['favourite'] == 1) {
+                                                    ?>
+                                                    <span> <i class="fa fa-star"></i> </span>
+                                                <?php
+                                                    } else {
+                                                    }
+                                                ?>
                                             </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $cat['id']; ?>"> تعديل <i class='fa fa-pen'></i> </button>
@@ -166,6 +176,14 @@
                                                             <div class="form-group">
                                                                 <label for="Company-2" class="block"> اضافة التاج <span class="badge badge-danger"> من فضلك افصل بين كل تاج والاخر (,) </span> </label>
                                                                 <input required id="Company-2" name="tags" type="text" class="form-control" value="<?php echo  $cat['tags']; ?>">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="Company-2" class="block"> مميز <span class="badge badge-danger"> من فضلك افصل بين كل تاج والاخر (,) </span> </label>
+                                                                <select name="favourite" class="select2 form-control" id="">
+                                                                    <option value=""> اختر </option>
+                                                                    <option <?php if ($cat['favourite'] == 1) echo 'selected'; ?> value="1"> مميز </option>
+                                                                    <option <?php if ($cat['favourite'] == 0) echo 'selected'; ?> value="0"> عادي </option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">

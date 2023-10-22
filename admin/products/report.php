@@ -87,6 +87,7 @@
                                             <th> سعر التخفيض </th>
                                             <th> حالة المخزون </th>
                                             <th> مميز </th>
+                                            <th> بانر </th>
                                             <th> صورة المنتج </th>
                                             <th> العمليات </th>
                                         </tr>
@@ -140,6 +141,14 @@
                                                         if ($pro['feature_product'] == 1) {
                                                         ?>
                                                         <span> <i class="fa fa-star"></i> </span>
+                                                    <?php
+                                                        }
+                                                    ?>
+                                                </td>
+                                                <td> <?php
+                                                        if ($pro['as_banner'] == 1) {
+                                                        ?>
+                                                        <span class="badge badge-success"> بانر </span>
                                                     <?php
                                                         }
                                                     ?>
@@ -241,6 +250,14 @@
                                                         <option value="" disabled> اختر الحالة </option>
                                                         <option <?php if ($pro['feature_product'] == 0) echo 'selected'; ?> value="0"> عادي </option>
                                                         <option <?php if ($pro['feature_product'] == 1) echo 'selected'; ?> value="1"> نعم </option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="Company-2" class="block"> تعين كبنر </label>
+                                                    <select name="as_banner" id="" class="form-control select2">
+                                                        <option value="" disabled> اختر </option>
+                                                        <option <?php if ($pro['as_banner'] == 0) echo 'selected'; ?> value="0"> عادي </option>
+                                                        <option <?php if ($pro['as_banner'] == 1) echo 'selected'; ?> value="1"> نعم </option>
                                                     </select>
                                                 </div>
                                             </div>

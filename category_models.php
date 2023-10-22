@@ -28,7 +28,7 @@ if (isset($_POST['search_button'])) {
 
 ?>
 <!-- Product -->
-<div class="bg0 m-t-23 p-b-140">
+<div class="bg0 m-t-23 p-b-140" dir="rtl">
     <div class="container">
         <div class="flex-w flex-sb-m p-b-52">
 

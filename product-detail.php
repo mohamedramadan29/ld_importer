@@ -18,14 +18,14 @@ if (isset($_GET['slug'])) {
 }
 ?>
 <!-- breadcrumb -->
-<div class="container">
+<div class="container" dir="rtl">
 	<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
-		<a href="index.html" class="stext-109 cl8 hov-cl1 trans-04">
+		<a href="index" class="stext-109 cl8 hov-cl1 trans-04">
 			Home
 			<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 		</a>
 
-		<a href="product.html" class="stext-109 cl8 hov-cl1 trans-04">
+		<a href="category_models?cat=<?php echo $category_data['slug']; ?>" class="stext-109 cl8 hov-cl1 trans-04">
 			<?php echo $category_data['name'] ?>
 			<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 		</a>
@@ -44,9 +44,7 @@ if (isset($_GET['slug'])) {
 					<div class="wrap-slick3 flex-sb flex-w">
 						<div class="wrap-slick3-dots"></div>
 						<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
-
 						<div class="slick3 gallery-lb">
-
 							<div class="item-slick3" data-thumb="admin/product_images/<?php echo $product_image['main_image']; ?>">
 								<div class="wrap-pic-w pos-relative">
 									<img loading="lazy" src="admin/product_images/<?php echo $product_image['main_image']; ?>" alt="IMG-PRODUCT">
@@ -77,13 +75,11 @@ if (isset($_GET['slug'])) {
 					</div>
 				</div>
 			</div>
-
 			<div class="col-md-6 col-lg-5 p-b-30 product_details">
-				<div class="p-t-5 p-lr-0-lg">
+				<div class="p-t-5 p-lr-0-lg" dir="rtl">
 					<h4 style="color: var(--main_color);font-size: 26px;" class="mtext-105 cl2 js-name-detail p-b-14">
 						<?php echo $product_data['name'] ?>
 					</h4>
-
 					<span class="mtext-106 cl2">
 						<?php
 						if (!empty($product_data['sale_price']) && $product_data['sale_price'] != 0) {
@@ -111,11 +107,11 @@ if (isset($_GET['slug'])) {
 					</p>
 					<br>
 					<table class="table table-bordered">
-						<tr>
-							<th> מחיר </th>
-							<th style="color: var(--main_color);"> <?php
-																	if (!empty($product_data['sale_price']) && $product_data['sale_price'] != 0) {
-																	?>
+						<tr dir="rtl" class="text-right">
+							<th class="text-right"> מחיר </th>
+							<th class="text-right" style="color: var(--main_color);"> <?php
+																						if (!empty($product_data['sale_price']) && $product_data['sale_price'] != 0) {
+																						?>
 									<div class="d-flex">
 										<span style="margin-right:10px ;font-weight: bold;color:var(--main_color);" class="stext-105 cl3">
 											₪<?php echo $product_data['sale_price']; ?>
@@ -125,13 +121,13 @@ if (isset($_GET['slug'])) {
 										</span>
 									</div>
 								<?php
-																	} else {
+																						} else {
 								?>
 									<span class="stext-105 cl3" style="font-size: 21px;">
 										₪<?php echo $product_data['price']; ?>
 									</span>
 								<?php
-																	}
+																						}
 								?>
 							</th>
 						</tr>
@@ -140,25 +136,22 @@ if (isset($_GET['slug'])) {
 							<?php
 							if ($product_data['av_num'] != 0 && $product_data['av_num'] != null) {
 							?>
-								<th> זמין במלאי </th>
-								<th style="color: var(--main_color);"> <?php echo $product_data['av_num'] ?> </th>
+								<th class="text-right"> זמין במלאי </th>
+								<th style="color: var(--main_color);" class="text-right"> <?php echo $product_data['av_num'] ?> </th>
 							<?php
 							} else { ?>
-								<th style="text-decoration: line-through;"> זמין במלאי </th>
-								<th style="color: var(--main_color);"> לא זמין </th>
+								<th class="text-right" style="text-decoration: line-through;"> זמין במלאי </th>
+								<th class="text-right" style="color: var(--main_color);"> לא זמין </th>
 							<?php
 							}
 							?>
 						</tr>
 					</table>
-
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-
 <!-- Related Product  -->
 <section class="sec-product bg0 p-t-100 p-b-50">
 	<div class="container">
@@ -188,7 +181,7 @@ if (isset($_GET['slug'])) {
 							?>
 								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 									<!-- Block2 -->
-									<div class="block2">
+									<div class="block2" dir="rtl">
 										<div class="block2-pic hov-img0">
 											<img loading="lazy" src="admin/product_images/<?php echo $product['main_image']; ?>" alt="IMG-PRODUCT">
 										</div>
