@@ -13,7 +13,7 @@
                         <button type="submit" name="search_button" class="btn search_button flex-c-m fs-16 cl2 hov-cl1 trans-04">
                             <i class="fa fa-search"></i> חפש
                         </button>
-                        <input style="height: 40px; text-align:right;min-width: 450px;background-color: #f9f9f9;" value="<?php if (isset($_REQUEST['search_product'])) echo $_REQUEST['search_product']; ?>" class="form-control" type="text" name="search_product" placeholder="מה לחפש לך ?">
+                        <input style="height: 40px; text-align:right;min-width: 450px;background-color: #f9f9f9;" value="<?php if (isset($_REQUEST['search_product'])) echo $_REQUEST['search_product']; ?>" class="form-control" type="text" name="search_product" placeholder="? מה לחפש לך ">
 
                     </form>
                 </div>
@@ -78,7 +78,7 @@
                 <button type="submit" name="search_button" class="btn search_button flex-c-m fs-16 cl2 hov-cl1 trans-04">
                     <i class="fa fa-search"></i> חפש
                 </button>
-                <input style="height: 40px; text-align:right;min-width: 200px;background-color: #f9f9f9;" value="<?php if (isset($_REQUEST['search_product'])) echo $_REQUEST['search_product']; ?>" class="form-control" type="text" name="search_product" placeholder="מה לחפש לך ?">
+                <input style="height: 40px; text-align:right;min-width: 200px;background-color: #f9f9f9;" value="<?php if (isset($_REQUEST['search_product'])) echo $_REQUEST['search_product']; ?>" class="form-control" type="text" name="search_product" placeholder="? מה לחפש לך">
 
             </form>
         </div>
