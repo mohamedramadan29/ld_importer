@@ -7,11 +7,19 @@
                 <!-- Logo desktop -->
                 <a href="index" class="logo">
                     <img width="180px !important" src="images/logo.svg" alt="IMG-LOGO">
-
                 </a>
+                <div class="search">
+                    <form class="d-flex align-items-center justify-content-between text-right" action="shop" method="post">
+                        <button type="submit" name="search_button" class="btn search_button flex-c-m fs-16 cl2 hov-cl1 trans-04">
+                            <i class="fa fa-search"></i> חפש
+                        </button>
+                        <input style="height: 40px; text-align:right;min-width: 450px;background-color: #f9f9f9;" value="<?php if (isset($_REQUEST['search_product'])) echo $_REQUEST['search_product']; ?>" class="form-control" type="text" name="search_product" placeholder="מה לחפש לך ?">
 
+                    </form>
+                </div>
                 <!-- Menu desktop -->
                 <div class="menu-desktop">
+
                     <ul class="main-menu">
                         <li class="active-menu">
                             <a href="index">דף הבית </a> <!-- index -->
@@ -38,7 +46,7 @@
                                 }
                                 ?>
                             </ul>
-                        </li> 
+                        </li>
                         <li>
                             <a href="contact">צור קשר</a> <!-- contact -->
                         </li>
@@ -65,10 +73,19 @@
 
     <!-- Menu Mobile -->
     <div class="menu-mobile">
+        <div class="search">
+            <form class="d-flex align-items-center justify-content-between text-right" action="shop" method="post">
+                <button type="submit" name="search_button" class="btn search_button flex-c-m fs-16 cl2 hov-cl1 trans-04">
+                    <i class="fa fa-search"></i> חפש
+                </button>
+                <input style="height: 40px; text-align:right;min-width: 200px;background-color: #f9f9f9;" value="<?php if (isset($_REQUEST['search_product'])) echo $_REQUEST['search_product']; ?>" class="form-control" type="text" name="search_product" placeholder="מה לחפש לך ?">
+
+            </form>
+        </div>
         <ul class="main-menu-m">
             <li>
                 <a href="index">דף הבית </a>
-            </li> 
+            </li>
             <li>
                 <a href="#"> קטגוריות </a> <!-- category  -->
                 <ul class="sub-menu-m">
@@ -93,7 +110,7 @@
             </li>
             <li>
                 <a href="shop"> כל הדגמים </a>
-            </li> 
+            </li>
 
             <li>
                 <a href="contact">צור קשר</a>

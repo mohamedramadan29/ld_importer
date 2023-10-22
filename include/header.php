@@ -25,9 +25,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 	<!-- ============================================================================================== -->
 	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<!--===============================================================================================
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	-->
+	
 	<!--===============================================================================================
 	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
 	-->

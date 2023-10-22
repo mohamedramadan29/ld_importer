@@ -193,7 +193,7 @@ include "init.php";
 		<!-- Tab01 -->
 		<div class="tab01">
 			<!-- Tab panes -->
-			<div class="tab-content" >
+			<div class="tab-content">
 				<!-- - -->
 				<div class="tab-pane fade show active" id="best-seller" role="tabpanel">
 					<!-- Slide2 -->
@@ -292,7 +292,7 @@ $banner_url = $banner_data['button_url'];
 		<!-- Tab01 -->
 		<div class="tab01">
 			<!-- Tab panes -->
-			<div class="tab-content"  >
+			<div class="tab-content">
 				<!-- - -->
 				<div class="tab-pane fade show active" id="best-seller" role="tabpanel">
 					<!-- Slide2 -->
@@ -358,30 +358,31 @@ $banner_url = $banner_data['button_url'];
 <div class="store_advantage">
 	<div class="container">
 		<div class="data">
-			<h3> Our advantages </h3>
+			<h3> היתרונות שלנו </h3>
 			<div class="row">
 				<div class="col-lg-3">
 					<div class="info">
 						<i class="fa fa-paypal"></i>
-						<h2> Competitive prices </h2>
+						<h2> שיטות תשלום נוחות </h2>
 					</div>
 				</div>
 				<div class="col-lg-3">
 					<div class="info">
 						<i class="fa fa-truck"></i>
-						<h2> Competitive prices </h2>
+						<h2> משלוח מהיר </h2>
 					</div>
 				</div>
 				<div class="col-lg-3">
 					<div class="info">
-						<i class="fa fa-eye"></i>
-						<h2> Competitive prices </h2>
+						<i class="fa fa-comment"></i>
+						<h2> שירות יעיל מהיר ומיוחד </h2>
 					</div>
 				</div>
 				<div class="col-lg-3">
 					<div class="info">
-						<i class="fa fa-address-book"></i>
-						<h2> Competitive prices </h2>
+						<i class="fa fa-check-circle"></i>
+						<h2> הקפדה על כל שלב ושלב בתהליך העבודה
+							עד לפרט הקטן </h2>
 					</div>
 				</div>
 			</div>

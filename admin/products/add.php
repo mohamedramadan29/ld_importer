@@ -19,12 +19,7 @@ if (isset($_POST['add_pro'])) {
   $image_alt = $_POST['image_alt'];
   $image_desc = $_POST['image_desc'];
   $image_keys = $_POST['image_keys'];
-  $stmt = $connect->prepare("SELECT * FROM products WHERE slug = ?");
-  $stmt->execute(array($slug));
-  $count = $stmt->rowCount();
-  if ($count > 0) {
-    $formerror[] = ' اسم المنتج موجود من قبل من فضلك ادخل اسم اخر  ';
-  }
+ 
   // main image
   if (empty($formerror)) {
     if (!empty($_FILES['main_image']['name'])) {

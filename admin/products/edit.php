@@ -17,12 +17,7 @@ if (isset($_GET['pro_id']) && is_numeric($_GET['pro_id'])) {
         $image_alt = $_POST['image_alt'];
         $image_desc = $_POST['image_desc'];
         $image_keys = $_POST['image_keys'];
-        $stmt = $connect->prepare("SELECT * FROM products WHERE slug = ? AND id !=?");
-        $stmt->execute(array($slug, $pro_id));
-        $count = $stmt->rowCount();
-        if ($count > 0) {
-            $formerror[] = ' اسم المنتج موجود من قبل من فضلك ادخل اسم اخر  ';
-        }
+
         // main image 
         if (!empty($_FILES['main_image']['name'])) {
             $main_image_name = $_FILES['main_image']['name'];
