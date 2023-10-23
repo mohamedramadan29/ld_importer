@@ -93,9 +93,7 @@
 		<div class="p-t-40">
 			<p class="stext-107 cl6 txt-center">
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-				זכויות יוצרים &copy;<script>
-					document.write(new Date().getFullYear());
-				</script> כל הזכויות שמורות | עשוי מ <i class="fa fa-heart-o" aria-hidden="true"></i> על ידי <a href="https://wa.me/+201011642731" target="_blank">אדון</a>
+				זכויות יוצרים &copy; 2023 כל הזכויות שמורות | עשוי מ <i class="fa fa-heart-o" aria-hidden="true"></i> על ידי <a href="https://wa.me/+201011642731" target="_blank">אדון</a>
 				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 			</p>

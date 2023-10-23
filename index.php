@@ -184,7 +184,7 @@ include "init.php";
 									<a href="product-detail?slug=<?php echo $product['slug']; ?>">
 										<div class="block2">
 											<div class="block2-pic hov-img0">
-												<img loading="lazy" src="admin/product_images/<?php echo $product['main_image']; ?>" alt="IMG-PRODUCT">
+												<img sizes="(max-width: 335px) 100vw, 50vw" height="335px" width="270px" loading="lazy" src="admin/product_images/<?php echo $product['main_image']; ?>" alt="IMG-PRODUCT">
 											</div>
 											<div class="block2-txt flex-w flex-t p-t-14">
 												<div class="block2-txt-child1 flex-col-l" dir="rtl">
@@ -282,7 +282,7 @@ $banner_url = $banner_data['button_url'];
 									<a href="product-detail?slug=<?php echo $product['slug']; ?>">
 										<div class="block2">
 											<div class="block2-pic hov-img0">
-												<img loading="lazy" src="admin/product_images/<?php echo $product['main_image']; ?>" alt="IMG-PRODUCT">
+												<img  sizes="(max-width: 335px) 100vw, 50vw" height="335px" width="270px"  loading="lazy" src="admin/product_images/<?php echo $product['main_image']; ?>" alt="IMG-PRODUCT">
 											</div>
 											<div class="block2-txt flex-w flex-t p-t-14">
 												<div class="block2-txt-child1 flex-col-l" dir="rtl">

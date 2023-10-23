@@ -49,8 +49,11 @@ if (isset($_GET['pro_id']) && is_numeric($_GET['pro_id'])) {
                     // حدد مسار حفظ ملف الصورة بتنسيق WebP
                     $webp_path = 'product_images/' . pathinfo($main_image_uploaded, PATHINFO_FILENAME) . '.webp';
 
-                    // قم بحفظ الصورة كملف WebP
-                    imagewebp($truecolor_image, $webp_path);
+                    // تحديد معامل الجودة المطلوب
+                    $quality = 80; // قم بتعديل هذا الرقم حسب تفضيلاتك
+
+                    // قم بحفظ الصورة كملف WebP مع تحديد معامل الجودة
+                    imagewebp($truecolor_image, $webp_path, $quality);
 
                     // حرر الذاكرة
                     imagedestroy($image);
@@ -81,8 +84,11 @@ if (isset($_GET['pro_id']) && is_numeric($_GET['pro_id'])) {
                     // حدد مسار حفظ ملف الصورة بتنسيق WebP
                     $webp_path = 'product_images/' . pathinfo($main_image_uploaded, PATHINFO_FILENAME) . '.webp';
 
-                    // قم بحفظ الصورة كملف WebP
-                    imagewebp($truecolor_image, $webp_path);
+                    // تحديد معامل الجودة المطلوب
+                    $quality = 80; // قم بتعديل هذا الرقم حسب تفضيلاتك
+
+                    // قم بحفظ الصورة كملف WebP مع تحديد معامل الجودة
+                    imagewebp($truecolor_image, $webp_path, $quality);
 
                     // حرر الذاكرة
                     imagedestroy($image);
@@ -93,6 +99,7 @@ if (isset($_GET['pro_id']) && is_numeric($_GET['pro_id'])) {
                 }
             }
         }
+
 
         // Insert Product Gallary
         if (!empty($_FILES['more_images']['name'])) {
