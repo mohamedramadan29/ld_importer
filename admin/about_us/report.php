@@ -135,7 +135,7 @@
                                                             </div>
                                                             <div class="form-group">
                                                                 <label for="Company-2" class="block"> الفيديو </label>
-                                                                <input required id="Company-2" name="video" type="file" class="form-control required" value="<?php echo  $cat['video'] ?>">
+                                                                <input id="Company-2" name="video" type="file" class="form-control required" value="<?php echo  $cat['video'] ?>">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">

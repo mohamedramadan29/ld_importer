@@ -182,9 +182,11 @@ if (isset($_GET['slug'])) {
 								<div class="item-slick2 p-l-15 p-r-15 p-t-15 p-b-15">
 									<!-- Block2 -->
 									<div class="block2" dir="rtl">
+										<a href="product-detail?slug=<?php echo $product['slug']; ?>">
 										<div class="block2-pic hov-img0">
 											<img loading="lazy" src="admin/product_images/<?php echo $product['main_image']; ?>" alt="IMG-PRODUCT">
 										</div>
+										</a>
 										<div class="block2-txt flex-w flex-t p-t-14">
 											<div class="block2-txt-child1 flex-col-l ">
 												<a href="product-detail?slug=<?php echo $product['slug']; ?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">

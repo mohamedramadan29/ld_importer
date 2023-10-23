@@ -10,19 +10,83 @@ if (isset($_POST['edit_cat'])) {
     // main image
     if (!empty($_FILES['main_image']['name'])) {
         $main_image_name = $_FILES['main_image']['name'];
+        $main_image_name = str_replace(' ', '-', $main_image_name);
         $main_image_temp = $_FILES['main_image']['tmp_name'];
         $main_image_type = $_FILES['main_image']['type'];
         $main_image_size = $_FILES['main_image']['size'];
-        $main_image_uploaded = time() . '_' . $main_image_name;
-        move_uploaded_file(
-            $main_image_temp,
-            'about_us/images/' . $main_image_uploaded
-        );
+        // حصل على امتداد الصورة من اسم الملف المرفوع
+        $image_extension = pathinfo($main_image_name, PATHINFO_EXTENSION);
+        if (!empty($image_name)) {
+            $image_name = str_replace(' ', '-', $image_name);
+            $main_image_uploaded = $image_name . '.' . $image_extension;
+            $upload_path = 'about_us/images/' . $main_image_uploaded;
+            // حفظ ملف الصورة المرفوع
+            move_uploaded_file($main_image_temp, $upload_path);
+
+            // تحقق من نوع الصورة وتحويلها إلى WebP إذا كان ذلك ممكنًا
+            if (exif_imagetype($upload_path) === IMAGETYPE_JPEG) {
+                $image = imagecreatefromjpeg($upload_path);
+            } elseif (exif_imagetype($upload_path) === IMAGETYPE_PNG) {
+                // افتح الصورة PNG
+                $image = imagecreatefrompng($upload_path);
+
+                // إنشاء نسخة Truecolor فارغة لتحويل الصورة إليها
+                $truecolor_image = imagecreatetruecolor(imagesx($image), imagesy($image));
+
+                // نسخ الصورة إلى النسخة Truecolor
+                imagecopy($truecolor_image, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));
+
+                // حدد مسار حفظ ملف الصورة بتنسيق WebP
+                $webp_path = 'about_us/images/' . pathinfo($main_image_uploaded, PATHINFO_FILENAME) . '.webp';
+
+                // قم بحفظ الصورة كملف WebP
+                imagewebp($truecolor_image, $webp_path);
+
+                // حرر الذاكرة
+                imagedestroy($image);
+                imagedestroy($truecolor_image);
+
+                // قم بتحديث المسار الذي تم تحميل الصورة إليه ليكون بامتداد .webp
+                $main_image_uploaded = pathinfo($main_image_uploaded, PATHINFO_FILENAME) . '.webp';
+            }
+        } else {
+            $main_image_uploaded = $main_image_name;
+            $upload_path = 'about_us/images/' . $main_image_uploaded;
+            // حفظ ملف الصورة المرفوع
+            move_uploaded_file($main_image_temp, $upload_path);
+
+            // تحقق من نوع الصورة وتحويلها إلى WebP إذا كان ذلك ممكنًا
+            if (exif_imagetype($upload_path) === IMAGETYPE_JPEG) {
+                $image = imagecreatefromjpeg($upload_path);
+            } elseif (exif_imagetype($upload_path) === IMAGETYPE_PNG) {
+                // افتح الصورة PNG
+                $image = imagecreatefrompng($upload_path);
+
+                // إنشاء نسخة Truecolor فارغة لتحويل الصورة إليها
+                $truecolor_image = imagecreatetruecolor(imagesx($image), imagesy($image));
+
+                // نسخ الصورة إلى النسخة Truecolor
+                imagecopy($truecolor_image, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));
+
+                // حدد مسار حفظ ملف الصورة بتنسيق WebP
+                $webp_path = 'about_us/images/' . pathinfo($main_image_uploaded, PATHINFO_FILENAME) . '.webp';
+
+                // قم بحفظ الصورة كملف WebP
+                imagewebp($truecolor_image, $webp_path);
+
+                // حرر الذاكرة
+                imagedestroy($image);
+                imagedestroy($truecolor_image);
+
+                // قم بتحديث المسار الذي تم تحميل الصورة إليه ليكون بامتداد .webp
+                $main_image_uploaded = pathinfo($main_image_uploaded, PATHINFO_FILENAME) . '.webp';
+            }
+        }
     } else {
         $main_image_uploaded = '';
     }
-      // main Video
-      if (!empty($_FILES['video']['name'])) {
+    // main Video
+    if (!empty($_FILES['video']['name'])) {
         $main_video_name = $_FILES['video']['name'];
         $main_video_temp = $_FILES['video']['tmp_name'];
         $main_video_type = $_FILES['video']['type'];

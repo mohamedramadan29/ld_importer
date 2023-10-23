@@ -73,40 +73,6 @@ include "init.php";
 		</div>
 	</div>
 </section>
-<!-- START Product Banner  
-<div class="about_us" dir="rtl">
-	<div class="container">
-		<div class="data">
-			<div class="row">
-				<div class="col-lg-6">
-					<div class="info">
-						<?php
-						$stmt = $connect->prepare("SELECT * FROM products
-						INNER JOIN products_image ON products_image.product_id = products.id
-						WHERE products.as_banner = 1  ORDER BY products.id DESC LIMIT 1");
-						$stmt->execute();
-						$banner_product = $stmt->fetch();
-						$banner_product_name = $banner_product['name'];
-						$banner_product_description = $banner_product['description'];
-						?>
-						<h4> <?php echo $banner_product_name ?> </h4>
-						<p>
-							<?php echo $banner_product_description ?>
-						</p>
-						<a href="<?php echo $banner_product_name ?>" class="btn"> Read More </a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<div class="info2" style="background-image: url(admin/product_images/<?php echo $banner_product['main_image']; ?>);">
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- END Broduct Banner -->
-
 <!-- Banner -->
 <div class="sec-banner bg0" dir="rtl" style="margin-top: 40px;">
 	<div class="container">
@@ -178,11 +144,7 @@ include "init.php";
 							<source src="admin/about_us/images/<?php echo $video ?>" type="video/mp4" />
 						</video>
 					</div>
-					<!--
-					<div class="info2" style="padding:140px;margin-top:10px; background-image: url(admin/about_us/images/<?php echo $head_image ?>);">
 
-					</div>
-			-->
 				</div>
 			</div>
 		</div>
