@@ -38,6 +38,9 @@
 	<!--===============================================================================================
 	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
 	-->
+	    <!-- START NICE VIDEO  -->
+		<link rel="stylesheet" href="<?php echo $css; ?>plyr.min.css" />
+    <!-- END NICE VIDEO  -->
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>/util.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo $css; ?>/main-v1.css">

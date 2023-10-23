@@ -163,6 +163,7 @@ include "init.php";
 						$head_image = $about_us_data['image'];
 						$head_button = $about_us_data['button_text'];
 						$head_url = $about_us_data['button_url'];
+						$video = $about_us_data['video'];
 						?>
 						<h4> <?php echo $head_name ?> </h4>
 						<p>
@@ -172,9 +173,16 @@ include "init.php";
 					</div>
 				</div>
 				<div class="col-lg-6">
+					<div class="section1">
+						<video style="height:400px" id="player" playsinline controls data-poster="admin/about_us/images/<?php echo $head_image; ?>">
+							<source src="admin/about_us/images/<?php echo $video ?>" type="video/mp4" />
+						</video>
+					</div>
+					<!--
 					<div class="info2" style="padding:140px;margin-top:10px; background-image: url(admin/about_us/images/<?php echo $head_image ?>);">
 
 					</div>
+			-->
 				</div>
 			</div>
 		</div>

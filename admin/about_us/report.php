@@ -73,6 +73,7 @@
                                         <th> الصورة </th>
                                         <th> الزر </th>
                                         <th> الرابط </th>
+                                        <th> الفيديو  </th>
                                         <th> </th>
                                     </tr>
                                 </thead>
@@ -94,6 +95,7 @@
                                             </td>
                                             <td> <?php echo  $cat['button_text']; ?> </td>
                                             <td> <?php echo  $cat['button_url']; ?> </td>
+                                            <td> <?php echo  $cat['video']; ?> </td>
                                             <td>
                                                 <button type="button" class="btn btn-success btn-sm waves-effect" data-toggle="modal" data-target="#edit-Modal_<?php echo $cat['id']; ?>"> تعديل <i class='fa fa-pen'></i> </button>
                                             </td>
@@ -130,6 +132,10 @@
                                                                     <input type="file" class="custom-file-input" id="customFile" accept='image/*' name="main_image">
                                                                     <label class="custom-file-label" for="customFile">اختر الصورة</label>
                                                                 </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="Company-2" class="block"> الفيديو </label>
+                                                                <input required id="Company-2" name="video" type="file" class="form-control required" value="<?php echo  $cat['video'] ?>">
                                                             </div>
                                                         </div>
                                                         <div class="modal-footer">
