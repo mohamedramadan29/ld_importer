@@ -10,14 +10,15 @@
 	<meta name="keywords" content="תוכלו למצוא אצלנו ריהוט משלים בשילובים של עץ וברזל ,שולחנות סלון ,מזנונים , יחידות מדפים ועוד ….">
 	<meta name="description" content="תוכלו למצוא אצלנו ריהוט משלים בשילובים של עץ וברזל ,שולחנות סלון ,מזנונים , יחידות מדפים ועוד ….">
 	<!--===============================================================================================-->
-
-	<link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!-- <link rel="preload" href="vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
 	<!--===============================================================================================-->
 
-	<link rel="preload" href="<?php echo $fonts ?>/font-awesome-4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!--<link rel="preload" href="<?php echo $fonts ?>/font-awesome-4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+	<link rel="stylesheet" href="<?php echo $fonts ?>/font-awesome-4.7.0/css/font-awesome.min.css">
 	<!--===============================================================================================-->
-
-	<link rel="preload" href="<?php echo $fonts ?>/iconic/css/material-design-iconic-font.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<link rel="stylesheet" href="<?php echo $fonts ?>/iconic/css/material-design-iconic-font.min.css">
+	 
 	<!--=============================================================================================== 
 	<link rel="stylesheet" type="text/css" href="<?php echo $fonts ?>/linearicons-v1.0.0/icon-font.min.css">
 -->
@@ -25,17 +26,20 @@
 	<!--===============================================================================================-->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap">
+	 
 	<!-- ============================================================================================== -->
 
-	<link rel="preload" href="vendor/animate/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- <link rel="preload" href="vendor/animate/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+	<link rel="stylesheet" href="vendor/animate/animate.css">
 	<!--===============================================================================================-->
 
 	<link rel="preload" href="vendor/css-hamburgers/hamburgers.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 	<!--===============================================================================================-->
 
-	<link rel="preload" href="vendor/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+	<!-- <link rel="preload" href="vendor/slick/slick.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+	<link rel="stylesheet" href="vendor/slick/slick.css">
 	<!--===============================================================================================-->
 
 	<link rel="preload" href="vendor/MagnificPopup/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">

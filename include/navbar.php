@@ -6,7 +6,7 @@
             <nav class="limiter-menu-desktop p-l-45">
                 <!-- Logo desktop -->
                 <a href="index" class="logo">
-                    <img width="180px !important" src="images/logo.svg" alt="IMG-LOGO">
+                    <img width="180px !important" src="images/logo.svg" height="200px" alt="IMG-LOGO">
                 </a>
                 <div class="search">
                     <form class="d-flex align-items-center justify-content-between text-right" action="shop" method="post">
@@ -60,7 +60,7 @@
     <div class="wrap-header-mobile">
         <!-- Logo moblie -->
         <div class="logo-mobile">
-            <img width="180px" src="images/logo.svg" alt="IMG-LOGO">
+            <img width="180px" src="images/logo.svg" alt="IMG-LOGO" height="100px">
         </div>
         <!-- Button show menu -->
         <div class="btn-show-menu-mobile hamburger hamburger--squeeze">

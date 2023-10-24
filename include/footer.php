@@ -86,7 +86,7 @@
 				<h4 class="stext-301 cl0 p-b-30 text-center">
 					LD Importer
 				</h4>
-				<img style="margin: auto; display: block;" width="200px" src="images/logo.svg" alt="">
+				<img style="margin: auto; display: block;" width="200px" height="110px" src="images/logo.svg" alt="">
 			</div>
 		</div>
 
